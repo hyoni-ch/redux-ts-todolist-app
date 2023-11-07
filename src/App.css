@@ -1,38 +1,159 @@
+@font-face {
+  font-family: 'Pretendard-Regular';
+  src: url('https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff') format('woff');
+  font-weight: 400;
+  font-style: normal;
+}
+
+ul {
+  padding: 0;
+}
+
+li {
+  list-style: none;
+}
+
+input[type="checkbox"] {
+  display: none;
+}
+
+input[type="checkbox"] + label {
+  content: "";
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  border: 1px solid #aaa;
+  cursor: pointer;
+  margin-right: 10px;
+}
+
+input[type="checkbox"]:checked + label::after {
+  content: url('./assets/images/check_img.png');
+}
+
 .App {
-  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-color: #e9ecef;
+  font-family: 'Pretendard-Regular';
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.wrap {
+  font-size: 1.2rem;
+  position: relative;
+  width: 400px;
+  height: 700px;
+  border-radius: 20px;
+  background-color: #fff;
+  box-shadow: 1px 2px 10px rgba(0,0,0,0.2);
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+.wrap h2 {
+  margin: 20px 0 5px 20px;
+}
+
+.wrap .week {
+  color: #aaa;
+  margin: 0 0 20px 20px;
+  
+}
+
+.wrap .deleteBtn {
+  position: absolute;
+  right: 10px;
+  top: 70px;
+  border: none;
+  background-color: inherit;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 20px;
+  width: fit-content;
+  color: #aaa;
+  cursor: pointer;
+}
+
+.wrap .deleteBtn:hover {
+  color: red;
+}
+
+.wrap .deleteBtn p {
+  border: none;
+  margin-right: 3px;
+}
+
+.wrap p {
+  border: 1px solid #eee;
+}
+
+.wrap .listBox {
+  
+  margin: 0 20px 0 20px;
+}
+
+.wrap .listBox .list div {
+  display: flex;
+  align-items: center;
+  /* justify-content: space-between; */
+  margin-bottom: 10px;
+}
+
+.wrap .listBox .list div:hover {
+  .wrap .listBox .list div button {
+    display: block;
   }
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.wrap .listBox .list div button {
+  border: none;
+  background-color: inherit;
+  font-size: 1.1rem;
+  cursor: pointer;
+  color: #bbb;
+}
+
+.wrap .listBox .list div button:hover {
+  color: red;
+}
+
+
+.wrap form {
+  position: absolute;
+  bottom: 30px;
+  left: 0;
+  width: 100%;
   display: flex;
-  flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.wrap form .textInput {
+  width: 50%;
+  padding: 15px;
+  border: 1px solid #ddd;
+  margin-right: 10px;
+  border-radius: 20px;
+  transition: 0.4s;
+
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.wrap form .submitBtn {
+  border: 1px solid orange;
+  background-color: orange;
+  color: #fff;
+  font-size: 40px;
+  width: 50px;
+  height: 50px;
+  line-height: 40px;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: 0.2s;
 }
+
+.wrap form .submitBtn:hover {
+  transform: scale(1.1);
+}
+
+
